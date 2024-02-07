@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for salttalentpool on 2023-10-04T10:29:43+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "salttalentpool"
+primary_region = "arn"
+
+[http_service]
+internal_port = 7700
+force_https = true
+auto_stop_machines = true
+auto_start_machines = true
+min_machines_running = 0
+processes = ["app"]
+
+[env]
+MEILI_NO_ANALYTICS = ""
+MEILI_ENV="production"
+[mounts]
+source = "meilisearch_data"
+destination = "/meili_data"

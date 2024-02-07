@@ -1,0 +1,5 @@
+meilisearch:
+  api_url: http://host.docker.internal:7700/
+  api_key: 'vl5JALxfUyTV/RNnSQEIp2crn+/2Cw2DAcZNs2zkUyE='
+  insert_size: 1000
+  insert_interval: 10
